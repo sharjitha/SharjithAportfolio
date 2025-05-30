@@ -1,94 +1,76 @@
 .navbar {
-    background: rgb(30, 30, 30);
-    height: 5rem;
-    width: 100vw;
-    max-width: 75rem;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 3;
+  width: 100%;
+  background: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-    object-fit: cover;
-    height: 5rem;
-    width: 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
 }
 
-.desktopMenuListItem {
-    margin: 1rem;
-    cursor: pointer;
+.desktopMenu {
+  display: flex;
+  gap: 1.5rem;
 }
 
-.desktopMenuListItem:hover {
-    color: yellow;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid yellow;
+.navItem {
+  color: #333;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
-.desktopMenuBtn {
-    background: white;
-    color: black;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
-    border-radius: 2rem;
+.navItem:hover {
+  color: #000;
 }
 
-.desktopMenuImg {
-    object-fit: cover;
-    height: 1rem;
-    width: 1rem;
-    margin: 1rem;
+.navBtn {
+  padding: 0.4rem 1rem;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
-.active {
-    color: yellow;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid yellow;
+.mobileMenuToggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
 }
 
-.mobMenu {
+/* Mobile Menu */
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  background: #f8f8f8;
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  gap: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .desktopMenu,
+  .navBtn {
     display: none;
-    object-fit: cover;
-    height: 1.8rem;
-}
+  }
 
-.navMenu {
-    position: absolute;
-    top: 4rem;
-    right: 2rem;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-    height:fit-content;
-    min-width: 15rem;
-    background: rgb(40, 40, 40);
-    border-radius: 1rem;
-}
-
-.listItem {
-    color: white;
-    padding: 0.5rem 3rem;
-    margin: 0.25rem;
-    background: rgb(30, 30, 30);
-}
-
-@media screen and (max-width:720px) {
-    .mobMenu {
-        display: flex;
-    }
-    .desktopMenu {
-        display: none;
-    }
-    .desktopMenuBtn {
-        display: none;
-    }
+  .mobileMenuToggle {
+    display: block;
+  }
 }

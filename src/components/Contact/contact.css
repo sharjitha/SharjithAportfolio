@@ -1,87 +1,76 @@
-#contactPage {
-    min-height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 60rem;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#contact {
+  padding: 4rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  background: #ffffff;
+  color: #111;
+  text-align: center;
 }
 
-.contactPageTitle {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.clientDesc {
-    font-weight: 300;
-    font-size: 1rem;
-}
-
-.clientImgs {
-    margin: 1rem 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.clientImg {
-    object-fit: cover;
-    width: 23%;
-    min-width: 9rem;
-    margin: auto;
-    padding: 0.25rem;
-}
-
-#clients {
-    padding: 2rem;
+.contactTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .contactDesc {
-    padding: 1rem;
-    font-size: medium;
-    font-weight: 300;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.internships {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.internIcon {
+  height: 60px;
+  object-fit: contain;
+  border-radius: 6px;
 }
 
 .contactForm {
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90vw;
-    max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.name, .email, .msg {
-    font-size: medium;
-    width: 100%;
-    max-width: 40rem;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    background: rgb(40, 40, 40);
+.contactForm input,
+.contactForm textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
 }
 
-.submitBtn {
-    background: white;
-    border: none;
-    border-radius: 0.5rem;
-    margin: 2rem;
-    padding: 0.75rem 3.5rem;
+.contactForm button {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.links {
-    display: flex;
-    flex-wrap: wrap;
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-.link {
-    object-fit: cover;
-    height: 3rem;
-    width: 3rem;
-    margin: 0 0.75rem;
+.socialLinks img {
+  height: 28px;
+  width: 28px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.socialLinks img:hover {
+  opacity: 1;
 }
