@@ -11,12 +11,17 @@ const Navbar = () => {
 
       <div className="desktopMenu">
         <Link to="intro" smooth={true} offset={-80} duration={500} className="navItem">Home</Link>
-        <Link to="skills" smooth={true} offset={-60} duration={500} className="navItem">About</Link>
         <Link to="works" smooth={true} offset={-60} duration={500} className="navItem">Projects</Link>
         <Link to="contact" smooth={true} offset={-60} duration={500} className="navItem">Contact</Link>
+        <a href="/Sharjith_A_Resume.pdf" target="_blank" rel="noopener noreferrer" className="navItem">My CV</a>
       </div>
 
-      <button className="navBtn" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
+      <button
+        className="navBtn"
+        onClick={() =>
+          document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })
+        }
+      >
         Contact Me
       </button>
 
@@ -25,9 +30,9 @@ const Navbar = () => {
       {showMenu && (
         <div className="mobileMenu">
           <Link to="intro" smooth={true} offset={-80} duration={500} className="navItem" onClick={() => setShowMenu(false)}>Home</Link>
-          <Link to="skills" smooth={true} offset={-60} duration={500} className="navItem" onClick={() => setShowMenu(false)}>About</Link>
           <Link to="works" smooth={true} offset={-60} duration={500} className="navItem" onClick={() => setShowMenu(false)}>Projects</Link>
           <Link to="contact" smooth={true} offset={-60} duration={500} className="navItem" onClick={() => setShowMenu(false)}>Contact</Link>
+          <a href="/Sharjith_A_Resume.pdf" target="_blank" rel="noopener noreferrer" className="navItem" onClick={() => setShowMenu(false)}>My CV</a>
         </div>
       )}
     </nav>

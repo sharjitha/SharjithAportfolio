@@ -27,6 +27,7 @@
   font-size: 0.95rem;
   cursor: pointer;
   transition: color 0.2s ease;
+  text-decoration: none;  /* 🔧 important for <a> links */
 }
 
 .navItem:hover {
